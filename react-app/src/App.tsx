@@ -1,11 +1,10 @@
 import ListGroup from "./components/ListGroup";
-import ToggleButton from "./components/Count";
+import Counter from "./components/Count";
 
 function App () {
   return <div>
     <ListGroup />
-    {/* <Counter /> */}
-    <ToggleButton />
+    <Counter />
   </div>
 }
 
