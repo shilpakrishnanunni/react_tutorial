@@ -1,3 +1,4 @@
+import React from "react";
 // stateless functional component
 // const Greeting = (props) => {
     //     return <h1>Hello, {props.name}!</h1>;
@@ -11,7 +12,7 @@
 //   }
 
 
-import React from "react";
+
 // // stateful component - old
 // class Counter extends React.Component {
 //     constructor(props) {
@@ -56,6 +57,37 @@ class Counter extends React.Component {
     }
 }
 
+class ToggleButton extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { visibility: false };
+        this.toggleVisibility = this.toggleVisibility.bind(this)
+
+      }
+      // Change code below this line
+    toggleVisibility() {
+      this.setState((state) => ({
+        visibility: !state.visibility
+      }))
+    }
+      // Change code above this line
+      render() {
+        if (this.state.visibility) {
+          return (
+            <div>
+              <button onClick={this.toggleVisibility}>Click Me</button>
+              <h1>Now you see me!</h1>
+            </div>
+          );
+        } else {
+          return (
+            <div>
+              <button onClick={this.toggleVisibility}>Click Me</button>
+            </div>
+          );
+        }
+      }
+}
 
 // stateful function
 // import React, { useState } from "react";
@@ -80,7 +112,7 @@ class Counter extends React.Component {
 //     )
 // }
 
-export default Counter;
+export default ToggleButton;
 
 
 
