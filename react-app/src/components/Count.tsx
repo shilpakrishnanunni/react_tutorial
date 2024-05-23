@@ -11,7 +11,7 @@
 //   }
 
 
-// import React from "react";
+import React from "react";
 // // stateful component - old
 // class Counter extends React.Component {
 //     constructor(props) {
@@ -33,27 +33,52 @@
 //     }
 // }
 
-import React, { useState } from "react";
+class Counter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { name: "Initial State" };
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-const Counter = () => {
-    const [count, setCount] = useState(0);
+    handleClick() {
+        this.setState({
+            name: "Button Clicked"
+        })
+    }
 
-    const increment = () => {
-        setCount(count + 1);
-    };
-
-    const decrement = () => {
-        setCount(count - 1);
-    };
-
-    return (
-        <div>
-            <p>Count: {count}</p>
-            <button onClick={increment} >Increment</button>
-            <button onClick={decrement} >Decrement</button>
-        </div>
-    )
+    render() {
+        return (
+            <div>
+                <button onClick={this.handleClick}>Button</button>
+                <h1>{this.state.name}</h1>
+            </div>
+        )
+    }
 }
+
+
+// stateful function
+// import React, { useState } from "react";
+
+// const Counter = () => {
+//     const [count, setCount] = useState(0);
+
+//     const increment = () => {
+//         setCount(count + 1);
+//     };
+
+//     const decrement = () => {
+//         setCount(count - 1);
+//     };
+
+//     return (
+//         <div>
+//             <p>Count: {count}</p>
+//             <button onClick={increment} >Increment</button>
+//             <button onClick={decrement} >Decrement</button>
+//         </div>
+//     )
+// }
 
 export default Counter;
 
