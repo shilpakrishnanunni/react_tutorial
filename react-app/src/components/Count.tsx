@@ -34,29 +34,29 @@ import React from "react";
 //     }
 // }
 
-// class Counter extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = { name: "Initial State" };
-//         this.handleClick = this.handleClick.bind(this);
-//     }
+export class Counter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { name: "Initial State" };
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-//     handleClick() {
-//         this.setState({
-//             name: "Button Clicked"
-//         })
-//     }
+    handleClick() {
+        this.setState({
+            name: "Button Clicked"
+        })
+    }
 
-//     render() {
-//         return (
-//             <div>
-//                 <button onClick={this.handleClick}>Button</button>
-//                 <h1>{this.state.name}</h1>
-//             </div>
-//         )
-//     }
-// }
-class Counter extends React.Component {
+    render() {
+        return (
+            <div>
+                <button onClick={this.handleClick}>Button</button>
+                <h1>{this.state.name}</h1>
+            </div>
+        )
+    }
+}
+export class ToggleButton extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -120,7 +120,7 @@ class Counter extends React.Component {
 //     )
 // }
 
-export default Counter;
+// export default Counter;
 
 
 
