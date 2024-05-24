@@ -1,5 +1,5 @@
 import ListGroup from "./components/ListGroup";
-import {Counter, ToggleButton, ControlledInput} from "./components/Count";
+import {Counter, ToggleButton, ControlledInput, MyForm} from "./components/Count";
 
 function App () {
   return <div>
@@ -7,6 +7,7 @@ function App () {
     <Counter />
     <ToggleButton />
     <ControlledInput />
+    <MyForm />
   </div>
 }
 
