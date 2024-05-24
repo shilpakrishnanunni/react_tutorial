@@ -34,8 +34,8 @@ import React from "react";
 //     }
 // }
 
-export class Counter extends React.Component {
-    constructor(props) {
+export class Counter extends React.Component<{}, {name:string} > {
+    constructor(props: {}) {
         super(props);
         this.state = { name: "Initial State" };
         this.handleClick = this.handleClick.bind(this);
@@ -56,8 +56,8 @@ export class Counter extends React.Component {
         )
     }
 }
-export class ToggleButton extends React.Component {
-    constructor(props) {
+export class ToggleButton extends React.Component<{}, {count:number} > {
+    constructor(props: {}) {
       super(props);
       this.state = {
         count: 0
@@ -80,9 +80,7 @@ export class ToggleButton extends React.Component {
         })
     }
     reset() {
-        this.setState((state) => {
-            return { count: state.count = 0 }
-        })
+        this.setState({ count: 0 })
     }
     // Change code above this line
     render() {
@@ -97,15 +95,15 @@ export class ToggleButton extends React.Component {
     }
 };
 
-export class ControlledInput extends React.Component {
-  constructor(props) {
+export class ControlledInput extends React.Component<{}, {input:string} > {
+  constructor(props: {}) {
     super(props);
     this.state = {
       input: ''
     };
     this.handleChange = this.handleChange.bind(this)
   }
-  handleChange(event) {
+  handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     this.setState(state => {
       return { input: event.target.value }
     })
@@ -122,8 +120,8 @@ export class ControlledInput extends React.Component {
   }
 };
 
-export class MyForm extends React.Component {
-  constructor(props) {
+export class MyForm extends React.Component<{}, {input:string, submit:string} > {
+  constructor(props: {}) {
     super(props);
     this.state = {
       input: '',
@@ -132,12 +130,12 @@ export class MyForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event) {
+  handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     this.setState({
       input: event.target.value
     });
   }
-  handleSubmit(event) {
+  handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     this.setState(state => ({
       submit: state.input
     }))
