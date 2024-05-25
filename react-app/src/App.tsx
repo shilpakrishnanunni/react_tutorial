@@ -1,6 +1,6 @@
 import ListGroup from "./components/ListGroup";
 import {Counter, ToggleButton, ControlledInput, MyForm} from "./components/Count";
-import Board from "./components/TicTacToe";
+import Game from "./components/TicTacToe";
 
 function App () {
   return <div>
@@ -9,7 +9,7 @@ function App () {
     <ToggleButton />
     <ControlledInput />
     <MyForm /> */}
-    <Board />
+    <Game />
   </div>
 }
 
