@@ -1,13 +1,15 @@
 import ListGroup from "./components/ListGroup";
 import {Counter, ToggleButton, ControlledInput, MyForm} from "./components/Count";
+import FruitsTable from "./components/Fruit";
 
 function App () {
   return <div>
-    <ListGroup />
+    {/* <ListGroup />
     <Counter />
     <ToggleButton />
     <ControlledInput />
-    <MyForm />
+    <MyForm /> */}
+    < FruitsTable />
   </div>
 }
 
